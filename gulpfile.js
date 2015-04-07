@@ -43,6 +43,9 @@ gulp.task('html', ['script'], function () {
 });
 
 gulp.task('watch', ['script'], function() {
+  gulp.watch('./src/index.html', function(){
+    return html('./src', 'build');
+  });
   gulp.watch('./src/**/*', ['script']);
   gulp.watch('./src/*', ['script']);
 });
