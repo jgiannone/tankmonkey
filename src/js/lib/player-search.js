@@ -1,4 +1,11 @@
 var TANKS = [];
+var MASTERY_TITLES = [
+  'None',
+  'Third',
+  'Second Class',
+  'First Class',
+  'Ace Tanker',
+];
 
 // initialize tanks on startup
 $.get('https://api.worldoftanks.com/wot/encyclopedia/tanks/?application_id=demo').done(function(results){
@@ -38,7 +45,7 @@ module.exports = function(searchText){
                 wins: wins,
                 losses: losses,
                 percentage: Math.round(10 * percentage) / 10,
-                mastery: tank.mark_of_mastery };
+                mastery: MASTERY_TITLES[tank.mark_of_mastery] };
     });
   };
 };
