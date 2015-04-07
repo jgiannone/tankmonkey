@@ -1,3 +1,12 @@
 'use strict';
 
-console.log('ready');
+$(function(){
+
+  $('#player-input').keypress(function(e){
+    if(e.which === 13){
+      debugger;
+      console.log('Submitted', e);
+    }
+  });
+
+});

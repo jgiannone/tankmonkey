@@ -48,6 +48,7 @@ gulp.task('watch', ['script'], function() {
   });
   gulp.watch('./src/**/*', ['script']);
   gulp.watch('./src/*', ['script']);
+  gulp.watch('./src/css/*.css', ['html']);
 });
 
 var html = function(source, dest){
